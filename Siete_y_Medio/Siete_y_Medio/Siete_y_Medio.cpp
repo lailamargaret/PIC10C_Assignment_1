@@ -19,5 +19,10 @@ using namespace std;
 // Stub for main
 int main() {
 	/* --STATEMENTS-- */
+
+	//this is a test of a merge
+	for (int x = 0; x < 5; ++x)
+		cout << "test" << endl;
+
 	return 0;
 }
