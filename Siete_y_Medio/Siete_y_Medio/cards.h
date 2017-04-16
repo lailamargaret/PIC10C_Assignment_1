@@ -55,6 +55,7 @@ public:
 private:
 	suit_t suit;
 	rank_t rank;
+	int value;
 };
 
 
@@ -66,7 +67,9 @@ public:
 	// You decide what functions you'll need...
 
 private:
-	// You decide what fields you'll need...
+	vector<Card> cards;
+	int hand_value;
+
 };
 
 

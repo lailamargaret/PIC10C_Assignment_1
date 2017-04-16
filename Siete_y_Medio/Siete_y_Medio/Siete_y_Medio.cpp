@@ -7,6 +7,8 @@
 #include "cards.h"
 using namespace std;
 
+
+
 // Global constants (if any)
 
 
@@ -18,11 +20,18 @@ using namespace std;
 
 // Stub for main
 int main() {
+	//seed random numbers
+	srand((int)time(0));
+
+
 	/* --STATEMENTS-- */
 
-	//this is a test of a merge
-	for (int x = 0; x < 5; ++x)
-		cout << "test" << endl;
+	Card c;
+	cout << c.get_english_rank()<< endl;
+	cout << c.get_spanish_rank() << endl;
+
+	cout << c.get_english_suit() << endl;
+	cout << c.get_spanish_suit() << endl;
 
 	return 0;
 }

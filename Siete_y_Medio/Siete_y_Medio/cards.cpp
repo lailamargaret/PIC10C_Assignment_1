@@ -43,6 +43,11 @@ Card::Card() {
 	case 10: rank = REY; break;
 	default: break;
 	}
+
+	if (rank != SOTA && rank != CABALLO && rank != REY)
+		value = rank;
+	else
+		value = .5;
 }
 
 // Accessor: returns a string with the suit of the card in Spanish 
@@ -110,13 +115,63 @@ string Card::get_spanish_rank() const {
 // Accessor: returns a string with the suit of the card in English 
 // This is just a stub! Modify it to your liking.
 string Card::get_english_suit() const {
-	return "";
+	string suitName;
+	switch (suit) {
+	case OROS:
+		suitName = "coins";
+		break;
+	case COPAS:
+		suitName = "cups";
+		break;
+	case ESPADAS:
+		suitName = "spades";
+		break;
+	case BASTOS:
+		suitName = "clubs";
+		break;
+	default: break;
+	}
+	return suitName;
 }
 
 // Accessor: returns a string with the rank of the card in English 
 // This is just a stub! Modify it to your liking.
 string Card::get_english_rank() const {
-	return "";
+	string rankName;
+	switch (rank) {
+	case AS:
+		rankName = "One";
+		break;
+	case DOS:
+		rankName = "Two";
+		break;
+	case TRES:
+		rankName = "Three";
+		break;
+	case CUATRO:
+		rankName = "Four";
+		break;
+	case CINCO:
+		rankName = "Five";
+		break;
+	case SEIS:
+		rankName = "Six";
+		break;
+	case SIETE:
+		rankName = "Seven";
+		break;
+	case SOTA:
+		rankName = "Jack";
+		break;
+	case CABALLO:
+		rankName = "Knight";
+		break;
+	case REY:
+		rankName = "King";
+		break;
+	default: break;
+	}
+	return rankName;
 }
 
 
@@ -138,11 +193,16 @@ bool Card::operator < (Card card2) const {
 /* *************************************************
 Hand class
 ************************************************* */
-// Implemente the member functions of the Hand class here.
+// Implement the member functions of the Hand class here.
 
 
 
 /* *************************************************
 Player class
 ************************************************* */
-// Implemente the member functions of the Player class here.
+
+//Constructs a Player object with initial money m
+Player::Player(int m) { money = m; };
+
+
+
