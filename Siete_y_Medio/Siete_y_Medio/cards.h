@@ -7,6 +7,7 @@ Interface of a simple Card class
 #include <string>
 #include <vector>
 #include <fstream>
+#include <iostream>
 
 #ifndef CARDS_H
 #define CARDS_H
@@ -46,6 +47,7 @@ public:
 	// Converts card rank to number.
 	// The possible returns are: 1, 2, 3, 4, 5, 6, 7, 10, 11 and 12
 	int get_rank() const;
+	int get_value()const;
 
 	// Compare rank of two cards. E.g: Eight<Jack is true.
 	// Assume Ace is always 1. 
@@ -55,7 +57,7 @@ public:
 private:
 	suit_t suit;
 	rank_t rank;
-	int value;
+	double value;
 };
 
 
@@ -64,26 +66,31 @@ public:
 	// A vector of Cards
 	Hand();
 
-	// You decide what functions you'll need...
+	void hit();
+	double get_hand_total();
+
+	//void print() {
+	//	for (int i = 0; i < 5; ++i)
+	//		cout << myCards[i].get_spanish_rank() << " of " << myCards[i].get_spanish_suit() << endl;
+	//}
 
 private:
-	vector<Card> cards;
-	int hand_value;
+	vector<Card> myCards;
+	//int hand_value;
 
 };
 
 
 class Player {
 public:
-	// Constructor. 
-	//    Assigns initial amount of money
+	// Constructor
+	//Assigns initial amount of money
 	Player(int m);
-
-	// You decide what functions you'll need...
+	int money;
 
 private:
-	int money;
-	// You decide what extra fields (if any) you'll need...
+	
+	Hand myHand;
 };
 
 #endif

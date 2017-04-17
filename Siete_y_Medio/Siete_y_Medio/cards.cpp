@@ -110,10 +110,7 @@ string Card::get_spanish_rank() const {
 	return rankName;
 }
 
-
-
 // Accessor: returns a string with the suit of the card in English 
-// This is just a stub! Modify it to your liking.
 string Card::get_english_suit() const {
 	string suitName;
 	switch (suit) {
@@ -135,7 +132,6 @@ string Card::get_english_suit() const {
 }
 
 // Accessor: returns a string with the rank of the card in English 
-// This is just a stub! Modify it to your liking.
 string Card::get_english_rank() const {
 	string rankName;
 	switch (rank) {
@@ -175,11 +171,15 @@ string Card::get_english_rank() const {
 }
 
 
-
 // Assigns a numerical value to card based on rank.
 // AS=1, DOS=2, ..., SIETE=7, SOTA=10, CABALLO=11, REY=12
 int Card::get_rank() const {
 	return static_cast<int>(rank) + 1;
+}
+
+int Card::get_value() const
+{
+	return value;
 }
 
 // Comparison operator for cards
@@ -189,20 +189,35 @@ bool Card::operator < (Card card2) const {
 }
 
 
-
 /* *************************************************
 Hand class
 ************************************************* */
 // Implement the member functions of the Hand class here.
+//Hand constructor
+Hand::Hand()
+{
+	myCards;
+}
 
+void Hand::hit()
+{
+	myCards.push_back(Card());
+}
+
+double Hand::get_hand_total()
+{
+	int total = 0;
+	for (size_t i = 0; i < myCards.size(); ++i)
+		total += myCards[i].get_value();
+	return total;
+}
 
 
 /* *************************************************
 Player class
 ************************************************* */
 
-//Constructs a Player object with initial money m
-Player::Player(int m) { money = m; };
-
+//Constructs a Player object with initial money m and an empty hand
+Player::Player(int m) { money = m; Hand;};
 
 
