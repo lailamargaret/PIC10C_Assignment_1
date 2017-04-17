@@ -1,40 +1,5 @@
-========================================================================
-    CONSOLE APPLICATION : Siete_y_Medio Project Overview
-========================================================================
+PIC10C Assigment 1
 
-AppWizard has created this Siete_y_Medio application for you.
+@brief plays the Spanish card game Siete y Medio
 
-This file contains a summary of what you will find in each of the files that
-make up your Siete_y_Medio application.
-
-
-Siete_y_Medio.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Siete_y_Medio.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Siete_y_Medio.cpp
-    This is the main application source file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Siete_y_Medio.pch and a precompiled types file named StdAfx.obj.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
-
-/////////////////////////////////////////////////////////////////////////////
+Plays this card game - similar to Black Jack - and keeps a log of the gameplay. 
